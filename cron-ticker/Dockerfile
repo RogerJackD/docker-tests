@@ -1,6 +1,9 @@
 #/app /lib /user
-FROM node:20-alpine
+# FROM --platform=linux/arm64 node:20-alpine
+FROM --platform=$BUILDPLATFORM node:20-alpine 
+#usa todas las plataformas que mi builx pueda proporcionarme
 
+# FROM node:20-alpine
 #cd app
 WORKDIR /app 
 
